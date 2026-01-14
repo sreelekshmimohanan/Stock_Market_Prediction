@@ -7,7 +7,7 @@
 
     <head>
         <meta charset="utf-8">
-        <title>Stocker - Stock Market Website Template</title>
+        <title>Stock Market Prediction</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="" name="keywords">
         <meta content="" name="description">
@@ -41,7 +41,7 @@
         <!-- Spinner End -->
 
         <!-- Topbar Start -->
-        <div class="container-fluid topbar bg-light px-5 d-none d-lg-block">
+        <!-- <div class="container-fluid topbar bg-light px-5 d-none d-lg-block">
             <div class="row gx-0 align-items-center">
                 <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
                     <div class="d-flex flex-wrap">
@@ -67,14 +67,14 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- Topbar End -->
 
         <!-- Navbar & Hero Start -->
         <div class="container-fluid position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
                 <a href="" class="navbar-brand p-0">
-                    <h1 class="text-primary"><i class="fas fa-search-dollar me-3"></i>Stocker</h1>
+                    <h1 class="text-primary"><i class="fas fa-search-dollar me-3"></i>Stock Market Prediction</h1>
                     <!-- <img src="img/logo.png" alt="Logo"> -->
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -84,22 +84,29 @@
                     <div class="navbar-nav ms-auto py-0">
                         {% if request.session.admin %}
                         <a href="http://127.0.0.1:8000/index" class="nav-item nav-link active">Home</a>
-                        <a href="http://127.0.0.1:8000/v_users" class="nav-item nav-link">User</a>
-                    <a href="http://127.0.0.1:8000/logout" class="nav-item nav-link">Logout</a>
+                        <a href="http://127.0.0.1:8000/v_users" class="nav-item nav-link active">User</a>
+                        <a href="http://127.0.0.1:8000/add_stocks" class="nav-item nav-link active">Add stocks</a>
+                        <a href="http://127.0.0.1:8000/prediction_history" class="nav-item nav-link active">Prediction history</a>
+                        <a href="http://127.0.0.1:8000/view_feedback" class="nav-item nav-link active">View Feedback</a>
+                        <a href="http://127.0.0.1:8000/view_predictions" class="nav-item nav-link active">View Predictions</a>
+                        <a href="http://127.0.0.1:8000/logout" class="nav-item nav-link active">Logout</a>
 
                         {% elif request.session.uid %}
                         <a href="http://127.0.0.1:8000/index" class="nav-item nav-link active">Home</a>
-                        <a href="http://127.0.0.1:8000/profile" class="nav-item nav-link">Profile</a>
+                        <a href="http://127.0.0.1:8000/profile" class="nav-item nav-link active">Profile</a>
+                        <a href="http://127.0.0.1:8000/stock_prediction" class="nav-item nav-link active">Stock Prediction</a>
+                        <a href="http://127.0.0.1:8000/prediction_history" class="nav-item nav-link active">Prediction history</a>
+                        <a href="http://127.0.0.1:8000/add_feedback" class="nav-item nav-link active">Feedback</a>
 
-                        <a href="http://127.0.0.1:8000/logout" class="nav-item nav-link">Logout</a>
+                        <a href="http://127.0.0.1:8000/logout" class="nav-item nav-link active">Logout</a>
                        {% else %}
                         <a href="http://127.0.0.1:8000/index" class="nav-item nav-link active">Home</a>
 
-                        <a href="http://127.0.0.1:8000/register" class="nav-item nav-link">Register</a>
-                        <a href="http://127.0.0.1:8000/login" class="nav-item nav-link"> Login</a>
+                        <a href="http://127.0.0.1:8000/register" class="nav-item nav-link active">Register</a>
+                        <a href="http://127.0.0.1:8000/login" class="nav-item nav-link active"> Login</a>
                           {% endif %}
                     </div>
-                    <a href="https://htmlcodex.com/downloading/?item=3447" class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0">Buy Pro Version</a>
+                    <!-- <a href="https://htmlcodex.com/downloading/?item=3447" class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0">Buy Pro Version</a> -->
                 </div>
             </nav>
 
