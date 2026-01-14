@@ -31,8 +31,18 @@ urlpatterns = [
 
     path('v_users/',views.v_users),
 
+    path('add_stocks/',views.add_stocks, name='add_stocks'),
+
     path('profile/',views.profile, name='profile'),
 
+    path('stock_prediction/',views.stock_prediction, name='stock_prediction'),
+
+    path('add_feedback/',views.add_feedback, name='add_feedback'),
+
+    path('view_feedback/',views.view_feedback, name='view_feedback'),
+
     path('logout/',views.logout),
+    path('prediction_history/',views.prediction_history, name='prediction_history'),
+    path('view_predictions/',views.view_predictions, name='view_predictions'),
     path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
